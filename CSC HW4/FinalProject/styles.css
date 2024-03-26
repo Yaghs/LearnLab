@@ -1,0 +1,434 @@
+                        nav,
+                        header,
+                        footer {
+                            display: grid;
+                        }
+                        
+                        body {
+                            line-height: 1;
+                            margin: 0;
+                        }
+                        
+                        label {
+                            font-size: 35px;
+                            font-weight: 600;
+                        }
+                        
+                        p {
+                            font-size: 28px;
+                            line-height: 1.2;
+                        }
+                        
+                        article p {
+                            font-size: 35px;
+                            padding: 20px;
+                        }
+                        
+                        .container {
+                            width: 100%;
+                            margin: auto;
+                            padding-top: 4%;
+                            padding-bottom: 4%;
+                        }
+                        
+                        .container img {
+                            max-width: 100%;
+                            /* set the maximum width of the image to 100% of the container */
+                            height: auto;
+                            /* set the height to auto so it adjusts proportionally */
+                            display: block;
+                            /* make the image a block element so it respects the container's width */
+                        }
+                        /*******************************************image overlay********************************************/
+                        
+                        .image-box {
+                            position: relative;
+                            display: inline-block;
+                        }
+                        
+                        .image-box img {
+                            display: flex;
+                            width: 100%;
+                            height: auto;
+                        }
+                        /*image overlay is the class needed for the shadow when hovering the image on the box  */
+                        /*transition provides a way to control animation speed when changing CSS properties*/
+                        /*z index basically overlaps the picture and the opacity in the transition helps it*/
+                        
+                        .image-overlay {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgba(0, 0, 0, 0.5);
+                            color: #fff;
+                            opacity: 0;
+                            transition: opacity 0.3s ease-in-out;
+                            z-index: 2;
+                            text-align: center;
+                        }
+                        /*for when you hover your cursor on the box*/
+                        
+                        .image-box:hover .image-overlay {
+                            opacity: 1;
+                        }
+                        /*calls the overlay class but for header 2 and paragraph*/
+                        
+                        h2 {
+                            color: white
+                        }
+                        
+                        .image-overlay h2,
+                        .image-overlay p {
+                            margin: 0;
+                            padding: 20px;
+                        }
+                        /* h2 and paragraph need different properties for the overlay*/
+                        
+                        .image-overlay h2 {
+                            font-size: 36px;
+                        }
+                        
+                        .image-overlay p {
+                            font-size: 18px;
+                            line-height: 1.5;
+                        }
+                        /*before is a selector that inserts something before the content of each selected element(s).*/
+                        
+                        .image-box:before {
+                            display: flex;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #000000;
+                            opacity: 0.3;
+                            z-index: 1;
+                        }
+                        
+                        label {
+                            text-align: center;
+                        }
+                        /*********************************************rows and columns******************************************/
+                        /*all classes for rows and columns using div tags*/
+                        
+                        .row {
+                            width: 100%;
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: center;
+                        }
+                        
+                        .row::after {
+                            display: flex;
+                            clear: both;
+                        }
+                        
+                        .col-1 {
+                            width: 8.33%;
+                        }
+                        
+                        .col-2 {
+                            width: 16.66%;
+                        }
+                        
+                        .col-3 {
+                            width: 25%;
+                        }
+                        
+                        .col-4 {
+                            width: 33.33%;
+                        }
+                        
+                        .col-5 {
+                            width: 41.66%;
+                        }
+                        
+                        .col-6 {
+                            width: 50%;
+                            margin: 0;
+                        }
+                        
+                        .col-7 {
+                            width: 58.33%;
+                        }
+                        
+                        .col-8 {
+                            width: 66.66%;
+                        }
+                        
+                        .col-9 {
+                            width: 75%;
+                        }
+                        
+                        .col-10 {
+                            width: 83.33%;
+                        }
+                        
+                        .col-11 {
+                            width: 91.66%;
+                        }
+                        
+                        .col-12 {
+                            width: 100%;
+                        }
+                        
+                        * {
+                            box-sizing: border-box;
+                        }
+                        /*####################################### Nav Bar ##################################*/
+                        
+                        .footer-logo-container {
+                            display: inline-block;
+                            margin-left: 20px;
+                        }
+                        
+                        .footer-logo-container img {
+                            width: 45px;
+                            height: auto;
+                        }
+                        
+                        nav {
+                            width: 100%;
+                            margin: 0;
+                        }
+                        
+                        nav ul {
+                            background-color: #eee;
+                            overflow: hidden;
+                            margin: 0;
+                            padding: 0;
+                        }
+                        
+                        ul.topnav li {
+                            list-style: none;
+                            float: left;
+                        }
+                        
+                        ul.topnav li.topnav-right {
+                            float: right;
+                        }
+                        /*text decoration basically is how the anchored link would respond when the page is hovered on it, in this case there's no underline*/
+                        
+                        ul.topnav li a {
+                            display: grid;
+                            text-decoration: none;
+                            min-height: 16px;
+                            text-align: center;
+                            padding: 14px;
+                            text-transform: uppercase;
+                            color: #666;
+                        }
+                        
+                        ul.topnav li a:hover {
+                            background-color: #000000;
+                            color: white;
+                        }
+                        
+                        ul.topnav li.dropdownIcon {
+                            display: none;
+                        }
+                        /*##### Custom styles #########*/
+                        
+                        a {
+                            color: rgb(255, 255, 255);
+                            text-decoration: none;
+                        }
+                        
+                        a:hover {
+                            color: rgb(192, 192, 192);
+                            text-decoration: none;
+                        }
+                        
+                        #section-1-gradient {
+                            background: #4d4d4d;
+                            /* For browsers that do not support gradients */
+                            background: -webkit-linear-gradient(#4c4c4c, #727272);
+                            /* For Safari 5.1 to 6.0 */
+                            background: -o-linear-gradient(#717171, #c6c6c7);
+                            /* For Opera 11.1 to 12.0 */
+                            background: -moz-linear-gradient(#7a7a7a, #c4c4c4);
+                            /* For Firefox 3.6 to 15 */
+                            background: linear-gradient(#565656, #c2c2c2);
+                            /* Standard syntax */
+                        }
+                        /*box shadow elements go by this in order*/
+                        /*Horizontal length, Vertical length, Blur radius and spread radius. the a in the rgba is the opacity*/
+                        
+                        div.box {
+                            font-size: 20px;
+                            text-align: center;
+                            margin: 24px;
+                            padding: 36px 24px 40px 24px;
+                            border-radius: 7px;
+                            background-color: #fff;
+                            box-shadow: 0 0 0 1px rgba(0, 0, 0, .15), 0 2px 3px 0 rgba(0, 0, 0, .1);
+                        }
+                        
+                        div.slopeIcon img {
+                            display: block;
+                            margin: auto;
+                            box-shadow: -2px 20px 2px rgba(0, 0, 0, .15), 2px 2px 17px 2px rgba(0, 0, 0, 1);
+                        }
+                        
+                        button {
+                            font-size: 32px;
+                            font-weight: 700;
+                            color: #fff;
+                            background-color: #2b2b2b;
+                            padding: 15px 60px;
+                            display: block;
+                            text-align: center;
+                            margin: 5px;
+                            border-radius: 7px;
+                        }
+                        
+                        button.learnMore {
+                            display: block;
+                            margin: auto;
+                        }
+                        
+                        div.leftSide-col {
+                            margin-left: 30%;
+                        }
+                        
+                        div.rightSide-col {
+                            margin-left: 15%;
+                        }
+                        
+                        h1.large {
+                            color: #fff;
+                            font-size: 56px;
+                            margin: 0;
+                            line-height: 70px;
+                        }
+                        
+                        h1.section2Header {
+                            font-size: 65px;
+                            text-align: center;
+                        }
+                        
+                        h1.section3Header {
+                            font-size: 40px;
+                            text-align: center;
+                        }
+                        
+                        form h2 {
+                            color: #fff;
+                        }
+                        
+                        input[type="text"] {
+                            font-size: 20px;
+                            width: 400px;
+                            min-width: 100px;
+                            padding: 5px;
+                            border-radius: 7px;
+                        }
+                        
+                        footer.foot {
+                            background-color: #212121;
+                            padding-left: 10%;
+                        }
+                        
+                        footer.foot h1 {
+                            color: #fff;
+                            font-size: 35px;
+                        }
+                        
+                        footer.foot ul {
+                            list-style: none;
+                            text-align: left;
+                            padding-left: 0;
+                        }
+                        
+                        footer.foot ul li {
+                            color: #fff;
+                            font-size: 22px;
+                            line-height: 1.5;
+                        }
+                        /*############################### Mobile ######################################*/
+                        /*css code for the mobile version*/
+                        /*media query that targets screens with max screen of 680 px*/
+                        /*CSS rule targets all list items except the first one within the ul and hides them when max width is reached*/
+                        
+                        @media screen and (max-width: 680px) {
+                            ul.topnav li:not(:nth-child(1)) {
+                                display: none;
+                            }
+                            /*sets both ul under class topnav and li in class dropdownIcon's display as flex and aligns the element to the right side of the parent container */
+                            ul.topnav li.dropdownIcon {
+                                display: flex;
+                                float: right;
+                            }
+                            /*used to adjust the positioning of the dropdown icon element when the navigation bar or menu is in "responsive" mode*/
+                            /*top and right properties are used to set the distance between the edges of the element to 0 which aligns the element to the top right corner*/
+                            ul.topnav.responsive li.dropdownIcon {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                            }
+                            /*calls the ul element of both topnav and responsive classes and sets the position property to relative*/
+                            /*the position property specifies the position of the element should be relative to its normal position on the web page*/
+                            /*this means that if it was top left or right it would reposition the element to be posititioned relative to where it would be on the page by default*/
+                            ul.topnav.responsive {
+                                position: relative;
+                            }
+                            /*used to horizontally align the list items within the unordered list and prevent them from being floated to the left or right of their parent container*/
+                            /*display: inline specifies that the list items should be displayed inline with each other, rather than one after the other as a block, it will be displayed side by side*/
+                            /*float: none specifies that the list items should not be floated to the left or right of the parent container, overriding any previous styles that may have been applied to the list items*/
+                            ul.topnav.responsive li {
+                                display: inline;
+                                float: none;
+                            }
+                            /**/
+                            ul.topnav.responsive li a {
+                                display: flex;
+                                text-align: left;
+                            }
+                            /*sets font size to 50 px in the h1 element of the section2header class*/
+                            h1.section2Header {
+                                font-size: 50px;
+                            }
+                            /*sets font size to 25px in the p tag*/
+                            article p {
+                                font-size: 25px;
+                            }
+                            /*sets width of col 7,6,5,4 to 100% and 0 margin*/
+                            /*This means that there will be no space between these elements and their adjacent elements, or between these elements and the edges of their container.*/
+                            .col-7,
+                            .col-6,
+                            .col-5,
+                            .col-4 {
+                                width: 100%;
+                                margin: 0;
+                            }
+                            div.mobileStack {
+                                width: 50%;
+                                display: grid;
+                            }
+                            div.box {
+                                text-align: center;
+                                padding: 50px;
+                                display: grid;
+                            }
+                            div.picture {
+                                margin: 10px;
+                            }
+                            div.picture img {
+                                width: 100%;
+                            }
+                            div.leftSide-col,
+                            div.rightSide-col {
+                                margin: 15px;
+                            }
+                            input[type="text"] {
+                                width: 350px;
+                            }
+                            .videoContainer iframe {
+                                position: relative;
+                                width: 100%;
+                                margin: 0;
+                            }
+                        }
